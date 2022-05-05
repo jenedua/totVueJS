@@ -1,0 +1,44 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<div id="desafio">
+    <!-- 1) Ligue o botao para alternar a exibição dos dois
+    paragrafos. Use ambos v-if e v-show e inspecione os elemetos para ver o diferença -->
+    <h2>#01</h2>
+    <div>
+        <button @click="expressao = !expressao">Alternar</button>
+        <p v-if="expressao"> voce quer me ver ...</p>
+        <p v-else="!expressao"> ... ou eu</p>
+        <p v-show="expressao"> voce quer me ver ...</p>
+        <p v-show="!expressao"> ... ou eu</p>
+    </div>
+
+    <!-- 2) Exibir em uma <ul> um array de elementos da sua escolher
+        imprima tambem o indice de cada elemento -->
+        <h2>#2</h2>
+        <ul>
+            <li v-for="(nome, i) in nomes"> {{ nome }} -{{ i+1 }}</li>
+        </ul>
+        <!-- 3) Imprimir todos os pares de valor-chave do objeto a seguir
+         { 
+             titulo: 'O senhor dos aneis',
+             autor: 'J.R.R. Tolkiens',
+             volume: '3'
+         } 
+        Imprima tambem o indice de cada itme-->
+        <h2>#03</h2>
+
+        <ul>
+            <li></li>
+        </ul>
+        <!-- 4) Imprima o seguinte objeto(somente os valores)
+         tambem crie um loop aninhado para o array:
+        {
+             id: 10,
+            nome: 'Maria',
+            notas: [7.64, 8.63, 6.98, 9.21]
+        } (dica: use v-for e v-if na resolução)-->
+        <h2>#04</h2>
+        <ul>
+            <li></li>
+        </ul>
+</div>
+<script src="app.js"></script>
