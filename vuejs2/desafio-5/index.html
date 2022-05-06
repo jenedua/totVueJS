@@ -27,7 +27,8 @@
         <h2>#03</h2>
 
         <ul>
-            <li></li>
+            <li v-for="(valor, chave, indice) in livro"> 
+                {{ chave }}: {{ valor }} - {{indice}}</li>
         </ul>
         <!-- 4) Imprima o seguinte objeto(somente os valores)
          tambem crie um loop aninhado para o array:
@@ -38,7 +39,18 @@
         } (dica: use v-for e v-if na resolução)-->
         <h2>#04</h2>
         <ul>
-            <li></li>
+            <li v-for="alunos in aluno">
+                <template v-if="!Array.isArray(alunos)">
+                    {{ alunos }}
+                </template>
+                <template v-else>
+                    Notas:
+                    <ul>
+                        <li v-for="nota in alunos"> {{ nota }}</li>
+                        
+                    </ul>
+                </template>
+                 </li>
         </ul>
 </div>
 <script src="app.js"></script>
